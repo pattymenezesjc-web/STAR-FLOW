@@ -91,9 +91,9 @@
             placeholder="Digite o produto ou cole o link..."
         >
 
-        <button>
-            🔍 Buscar oferta
-        </button>
+        <button onclick="buscarOferta()">
+🔍 Buscar oferta
+</button>
 
     </div>
 
@@ -186,6 +186,23 @@
 </main>
 
 </div>
+</div>
 
+<script>
+function buscarOferta() {
+    const campo = document.querySelector(".search input");
+    const produto = campo.value.trim();
+
+    if (produto === "") {
+        alert("Digite o nome de um produto ou cole um link.");
+        return;
+    }
+
+    alert("🔎 Buscando ofertas para: " + produto);
+}
+</script>
+
+</body>
+</html>
 </body>
 </html>
